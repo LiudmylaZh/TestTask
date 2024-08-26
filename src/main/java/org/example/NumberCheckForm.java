@@ -6,14 +6,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.math.BigDecimal;
 
-public class CheckingNumber {
+public class NumberCheckForm {
     private JLabel titleLabel;
     private JTextField inputNumberField;
     private JCheckBox additionalConditionCheckBox;
     private JButton checkButton;
     private JLabel textOfResult;
 
-    public CheckingNumber() {
+    public NumberCheckForm() {
         JFrame frame = new JFrame("Check your number");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(350, 200);
@@ -75,15 +75,14 @@ public class CheckingNumber {
 
     private String makeResultText(boolean isSuccess) {
         if (isSuccess) {
-            return  "Success";
+            return  "The number is between 20 and 50 inclusively.";
         }
-        return  "Error. The number is not valid";
+        return  "Error. The number is not valid.";
     }
 
     public static void main(String[] args) {
-        new CheckingNumber();
+        new NumberCheckForm();
     }
 }
-
 
 
